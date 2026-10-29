@@ -24,7 +24,7 @@ export default function Landing({ lang }: { lang: Lang }) {
   const names = Object.fromEntries(LANGS.map((l) => [l, dict(l).name])) as Record<Lang, string>;
   const n4 = [1, 2, 3, 4] as const;
   const n6 = [1, 2, 3, 4, 5, 6] as const;
-  const k = (key: string) => (t as Record<string, string>)[key];
+  const k = (key: string) => (t as unknown as Record<string, string>)[key];
 
   return (
     <>
@@ -142,7 +142,7 @@ export default function Landing({ lang }: { lang: Lang }) {
               <h2>Alan Robson Vieira</h2>
               <p>{t.au_bio}</p>
               <div className="tags">
-                {n4.map((n) => <span className="tag" key={n}>{k(`t${n}`)}</span>)}
+                {t.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
               </div>
             </div>
           </div>

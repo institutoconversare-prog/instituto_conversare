@@ -20,15 +20,10 @@ import type { Lang } from './i18n';
 
 export const SITE_URL = 'https://institutoconversare.vercel.app';
 
-   export const CHECKOUT: Partial<Record<Lang | 'padrao', string>> = {
-     pt: 'https://pay.hotmart.com/O108252938M',
-     padrao: 'https://pay.hotmart.com/O108252938M',
-   };
-
 export const CHECKOUT: Partial<Record<Lang | 'padrao', string>> = {
-  pt: 'https://go.hotmart.com/O108252938M?dp=1',
-   padrao: 'https://go.hotmart.com/O108252938M?dp=1',
-  };
+  pt: 'https://pay.hotmart.com/O108252938M',
+  padrao: 'https://pay.hotmart.com/O108252938M', // troque quando criar o produto internacional em dólar
+};
 
 type Preco = { atual: string; antigo: string };
 
