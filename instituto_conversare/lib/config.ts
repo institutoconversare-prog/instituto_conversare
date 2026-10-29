@@ -21,9 +21,9 @@ import type { Lang } from './i18n';
 export const SITE_URL = 'https://SEU-DOMINIO.com';
 
 export const CHECKOUT: Partial<Record<Lang | 'padrao', string>> = {
-  pt: '', // ex.: 'https://pay.kiwify.com.br/SEU-CODIGO'
-  padrao: '',
-};
+  pt: 'https://go.hotmart.com/O108252938M?dp=1',
+   padrao: 'https://go.hotmart.com/O108252938M?dp=1',
+  };
 
 type Preco = { atual: string; antigo: string };
 
