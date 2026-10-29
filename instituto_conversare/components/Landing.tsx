@@ -47,7 +47,6 @@ export default function Landing({ lang }: { lang: Lang }) {
             <div className="col">
               <span className="eyebrow">{t.eyebrow}</span>
               <h1>{t.h1}</h1>
-              <p className="lead"><b>{t.title}.</b> {t.sub}</p>
               <div className="row gap wrapx">
                 <a className="btn lg" href="#oferta">{t.cta} · {preco.atual}</a>
                 <span className="note">{t.note1}<br />{t.note2}</span>
