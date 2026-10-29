@@ -29,12 +29,12 @@ type Preco = { atual: string; antigo: string };
 
 export const PRECOS: Partial<Record<Lang | 'padrao', Preco>> = {
   pt: { atual: 'R$ 9,90', antigo: '' }, // antigo vazio = sem preço riscado
-  de: { atual: '4,90 €', antigo: '7,90 €' },
-  fr: { atual: '4,90 €', antigo: '7,90 €' },
-  es: { atual: '4,90 €', antigo: '7,90 €' },
-  it: { atual: '4,90 €', antigo: '7,90 €' },
-  nl: { atual: '€ 4,90', antigo: '€ 7,90' },
-  padrao: { atual: 'US$ 4.90', antigo: 'US$ 7.90' },
+  de: { atual: '2,00 €', antigo: '7,90 €' },
+  fr: { atual: '2,00 €', antigo: '7,90 €' },
+  es: { atual: '2,00 €', antigo: '7,90 €' },
+  it: { atual: '2,00 €', antigo: '7,90 €' },
+  nl: { atual: '€ 2,00', antigo: '€ 7,90' },
+  padrao: { atual: 'US$ 2,00', antigo: 'US$ 7.90' },
 };
 
 export function precoDe(lang: Lang): Preco {
