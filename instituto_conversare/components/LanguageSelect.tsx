@@ -12,7 +12,16 @@ export default function LanguageSelect({ current, names }: { current: Lang; name
         <path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z" />
       </svg>
       <span className="sr">Idioma / Language</span>
-      <select value={current} onChange={(e) => router.push(pathOf(e.target.value as Lang))} aria-label="Idioma / Language">
+      <select
+        value={current}
+        onChange={(e) => {
+          const lang = e.target.value as Lang;
+          // Lembra a escolha por 1 ano, para a página principal abrir sempre neste idioma.
+          document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
+          router.push(pathOf(lang));
+        }}
+        aria-label="Idioma / Language"
+      >
         {LANGS.map((l) => (
           <option key={l} value={l}>{names[l]}</option>
         ))}
